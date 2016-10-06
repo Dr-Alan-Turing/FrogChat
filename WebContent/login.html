@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Log-In</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="files/favicon.ico">
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+</head>
+<body id="loginPage">
+   
+    <section id="header">
+            <div id="titles" ng-app="allUsersOverview" ng-controller="allUsersOverviewController">
+		        <h1 id="mainTitle">FrogChat</h1>
+		        <h3 id="subTitle">Where you can chat freely and easily.</h3>
+		        <h4 id="allUsersOverview">Users: {{ online }} Online, {{ away }} Away, {{ offline}} Offline</h4>
+            </div>      
+    </section>        
+   
+    <div id="contentWrapper">
+            <section id="content">
+                <section id="left">
+                    <section id="informationSection">
+                        <h2>What is FrogChat?</h2>
+                        <p>FrogChat is a simple chat application that has but one purpose: to chat. It aims to tackle the many problems encountered on social networking sites these days, including unstability, overcomplexity and above all infringes on information confidentiality.</p>
+                        <h2>Why use FrogChat?</h2>
+                        <p>FrogChat is extremely fast, stable and easy to use. We don't work or affiliate in any way with government agencies. This means that your information is safe and your details private.</p>
+                    </section>
+                </section>
+                <section id="right">
+                    <section id="loginSection">
+                    <h2>Connect and start chatting</h2>
+                    <form id="loginForm" method="post" action="ChatServlet?action=processLogIn">
+                            <p>
+                                <label>Email address:</label>
+                                <input type="email" id="email" name="email" required>
+                            </p>
+                            <p>
+                                <label>Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </p>
+                        <input id="loginSubmit" type="submit" value="Log-in">
+                    </form>
+                    <p id="nogGeenAccount">*No Account?<a href="ChatServlet?action=showRegistration">Sign up for free!</a></p>
+                    </section>
+                </section>
+            <div class="clear"></div>
+        </section>
+        
+        <div class="clear"></div>
+    </div>
+    
+    <section id="space">
+        <p></p>
+    </section>
+    
+    <section id="footer">
+        <p id="copyright">&#169; Tom Neckermann</p>
+        <p id="usage">FrogChat is free to use personally, professionally and commercially.</p>
+        </section>
+</body>
+</html>

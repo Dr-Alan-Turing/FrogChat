@@ -1,0 +1,558 @@
+@CHARSET "ISO-8859-1";
+
+@font-face {
+    font-family: 'nexa_bold';
+    src: url('files/font/Nexa Bold.otf');
+    src: url('files/font/Nexa Bold.otf') format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'nexa_light';
+    src: url('files/font/Nexa Light.otf');
+    src: url('files/font/Nexa Light.otf') format('embedded-opentype'),
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto_regular';
+    src: url('files/font/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'roboto_light';
+    src: url('files/font/Roboto-Light.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto_light', 'nexa_light';
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#loginPage, #registerPage {
+    display: table;
+}
+
+
+#loginPage #header, #registerPage #header {
+    display: table-row;
+    height: 35%;
+    background: url(files/header.jpg) no-repeat top center;
+    color: #002fa0;
+}
+
+#loginPage #header h1, #registerPage #header h1 {
+    margin-top: 20px;
+}
+
+#contentWrapper {
+    display: table-row;
+    height: 1%; /*as small as possible*/
+    background-color: #00a087;
+}
+
+#content, #titles {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+@media(max-width:1400px){
+    #content, #titles {
+        max-width: 90%;
+    }
+}
+
+#content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    font-family: 'roboto_regular', 'nexa_bold';
+    font-size: 600%;
+}
+
+#content h2 {
+    font-size: 190%;
+}
+
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#allUsersOverview {
+	margin-top: 10px;
+}
+
+#content p {
+    font-size: 18px;
+}
+
+#left {
+    width: 40%;
+    float: left;
+}
+#right {
+    width: 60%;
+    float: right;
+}
+@media(max-width:1400px){
+    #left {
+        width: 50%;
+    }
+    #right {
+        width: 50%;
+    }
+}
+
+@media(max-width:650px){
+    #left {
+        float: none;
+        width: 100%;
+    }
+    #right {
+        float: none;
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+
+#informationSection {
+    width: 90%;
+}
+#informationSection h2 {
+    margin-top: 5%;
+    margin-bottom: 10px;
+}
+#informationSection h2:nth-child(1) {
+    margin-top: 0;
+}
+
+#loginSection {
+    margin-left: 5%;
+}
+
+@media(max-width:650px){
+    #loginSection {
+        margin-left: 0;
+    }
+}
+
+#loginForm, #registerForm {
+    margin-top: 50px;
+}
+#loginForm p, #registerForm p {
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 23px;
+}
+#loginForm input, #registerForm input, #addNewFriend {
+    width: 60%;
+    float: right;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    -webkit-box-shadow: 0px 0px 5.5px -1px #000;
+    box-shadow: 0px 0px 5.5px -1px #000;
+    border-radius: 5px;
+    border: 0px solid #b7b7b7;
+    font-size: 16px;
+}
+@media(max-width:1400px){
+    #loginForm p label, #registerForm p label {
+        font-size: 2.2vw;
+    }    
+}
+@media(max-width:650px){
+    #loginForm p label, #registerForm p label {
+        font-size: 25px;
+    }    
+}
+#loginForm #loginSubmit, #registerForm #registerSubmit {
+    padding: 6px;
+    color: white;
+    background-color: #5f5f5f;
+    box-shadow: 0 0 0 0;
+    font-family: 'roboto_regular', 'nexa_bold';
+}
+#registerForm #leftFieldset {
+    float: left;
+    width: 45%;
+}
+#registerForm #rightFieldset {
+    float: right;
+    width: 45%;
+}
+fieldset {
+    border: 0;
+    font-size: 25px;
+}
+#registerForm #registerSubmit {
+    float: none;
+    margin-top: 40px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'roboto_light', 'nexa_light';
+}
+
+#registerPage #content h2 {
+    font-size: 40px;
+    margin-bottom: -15px;
+}
+
+#content #nogGeenAccount {
+    clear: both;
+    margin-top: 80px;
+    font-size: 21.5px;
+}
+#nogGeenAccount>a {
+    margin-left: 10px;
+    color: #45ff00;
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+#space {
+    display: table-row;
+    background: url(files/footer.jpg) repeat top;
+}
+
+#footer {
+    display: table-row;
+    height: 1%; /*as small as possible*/
+    background-color: #393939;
+}
+#copyright {
+    font-family: 'roboto_regular', 'nexa_bold';
+}
+#footer>p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+
+
+#chatPage {
+    height: 100%;
+    background: url(files/background.png);
+    background-color: #cbcbcb;
+}
+#chatPage #wrapper {
+    max-width: 850px;
+    min-width: 60%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #e8e8e8;
+}
+#chatPage #header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: url(files/chatHeader.jpg) center;
+    text-align: center;
+    color: #002fa0;
+}
+#chatPage #header h1 {
+	font-size: 80px;
+}
+#logoutButton {
+    width: 100%;
+    height: 30px;
+    padding: 6px;
+    border: 0;
+    background-color: #5f5f5f;
+    color: white;
+    font-family: 'roboto_regular', 'nexa_bold';
+    font-size: 15px;
+}
+#statusWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #00a087;
+    font-size: 20px;
+}
+#friendsWrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+#statusWrapper h2, #friendsWrapper h2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+#chatPage button, #chatPage #searchNewFriendButton {
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #006038;
+    color: white;
+    font-size: 15px;
+}
+#addNewFriendButton {
+    margin-top: 20px;
+    width: 60%;
+}
+#statusWrapper h2 {
+    float: left;
+    width: 45%;
+}
+#statusWrapper {
+	color: white;
+}
+#statusSection {
+    clear: left;
+    float: left;
+    width: 50%;
+}
+#broadcastInput {
+    width: 58%;
+    margin-top: 15px;
+    padding: 5px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 0px solid #b7b7b7;
+    font-size: 16px;
+}
+#sendBroadcastButton {
+    width: 30%;
+}
+#addNewFriendSection {
+    float: right;
+    width: 50%;
+    margin-top: 25px;
+}
+#addNewFriendSection h4 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+#addNewFriendSection form input {
+    margin-top: 10px;
+}
+#addNewFriendSection form label {
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+#addNewFriendSection form label {
+    float: left;
+    clear: left;
+    width: 35%;
+}
+#addNewFriendSection form input {
+    float: right;
+    width: 60%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    -webkit-box-shadow: 0px 0px 5.5px -1px #000;
+    box-shadow: 0px 0px 5.5px -1px #000;
+    border-radius: 5px;
+    border: 0px solid #b7b7b7;
+    font-size: 16px;
+}
+#addNewFriendSection #searchNewFriendButton {
+    float: right;
+    clear: right;
+    margin-top: 15px;
+    width: 60%;
+    background-color: #006038;
+    box-shadow: 0 0 0 0;
+    -webkit-box-shadow: 0 0 0 0;
+}
+#cancelSearchNewFriendButton {
+    float: left;
+    margin-top: 15px;
+    width: 35%;
+}
+#addNewFriendResultsSection {
+    clear: both;
+    margin-top: 20px;
+}
+#addNewFriendResultsSection table {
+    width: 100%;
+}
+#addNewFriendResultsSection table th {
+    text-align: left;
+}
+
+#statusSelect {
+    margin-left: 10px;
+    border: 0;
+    width: 85px;
+    height: 25px;
+    font-size: 17px;
+    border-radius: 10px;
+    text-indent: 8px;
+}
+#personalClear {
+    clear: both;
+    padding-top: 20px;
+}
+
+#broadcasts h3 {
+    margin-top: -5px;
+}
+#broadcastMessages {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 17px;
+}
+.broadcastMessage {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    background-color: #e3f6f3;
+}
+.broadcastMessage:nth-child(2n){
+    background-color: aliceblue;
+}
+#searchFriendsField {
+    width: 35%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    -webkit-box-shadow: 0px 0px 3px -1px #000;
+    box-shadow: 0px 0px 3px -1px #000;
+    border-radius: 5px;
+    border: 0px solid #b7b7b7;
+    font-size: 16px;
+}
+
+#users {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 75%;
+    text-align: left;
+}
+#users th {
+    font-size: 18px;
+}
+#users td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+#users button:disabled {
+    background-color: #5f5f5f;
+}
+
+#topClear {
+    clear: both;
+}
+#bottomClear {
+    clear: both;
+}
+
+
+#chatsSection {
+    position: fixed;
+    right: 0;
+    bottom: 21px;
+}
+.chatWindow {
+    float: right;
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 270px;
+    height: 350px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #009079;
+    font-size: 14px;
+}
+.chatWindow>h1 {
+    float: left;
+    height: 23px;
+    margin: 4px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-family: 'roboto_light', 'nexa_light';
+    color: white;
+}
+#chats .chatWindow>.closeChatWindowButton {
+    float: right;
+    margin: 4px;
+    margin-right: 10px;
+    padding: 0px;
+    background-color: inherit;
+    font-size: 19px;
+}
+.chatWindow>.messages {
+    clear: both;
+    height: 283px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+}
+.chatWindow>.messages>p {
+    margin: 3px;
+    padding: 5px;
+    font-family: arial;
+}
+.chatWindow>.messages>.me {
+    float: left;
+    clear: both;
+    max-width: 80%;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #c2ffff;
+}
+.chatWindow>.messages>.you {
+    float: right;
+    clear: both;
+    max-width: 80%;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #adffad;
+}
+.chatWindow input {
+    position: absolute;
+    bottom: 0;
+    width: 266px;
+    height: 22px;
+}
+#chatsFooter {
+    position: fixed;
+    bottom: 0;
+    height: 21px;
+    width: 100%;
+    background-color: #00a087;
+}
+#chatsFooter p {
+    margin-right: 5%;
+    padding-top: 2px;
+    text-align: right;
+    font-size: 15px;
+    color: white;
+}

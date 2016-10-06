@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register to FrogChat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="files/favicon.ico">
+</head>
+<body id="registerPage">
+    
+    <section id="header">
+            <div id="titles">
+                <h1 id="mainTitle">FrogChat</h1>
+                <h3 id="subTitle">Where you can chat freely and easily.</h3>
+            </div>
+    </section>
+    
+    <div id="contentWrapper">    
+            <section id="content">
+            <h2>Join the fun!</h2>
+                <form id="registerForm" method="post" action="ChatServlet?action=processRegistration">
+                    <fieldset id="leftFieldset">
+                        <legend>Personal</legend>
+                        <p>
+                            <label>Last Name:</label>
+                            <input type="text" name="name" required>
+                        </p>
+                        <p>
+                            <label>First Name:</label>
+                            <input type="text" name="firstName" required>
+                        </p>
+                        <p>
+                            <label>Nickname:</label>
+                            <input type="text" name="nickname" required>
+                        </p>
+                    </fieldset>
+                    <fieldset id="rightFieldset">
+                        <legend>Account</legend>
+                        <p>
+                            <label>Email address:</label>
+                            <input type="email" name="email" required>
+                        </p>
+                        <p>
+                            <label>Password:</label>
+                            <input type="password" name="password">
+                        </p>
+                        <p>
+                            <label>Repeat pass.:</label>
+                            <input type="password" name="repeatPassword">
+                        </p>
+                    </fieldset>
+                    <input id="registerSubmit" type="submit" value="Register to FrogChat">
+                </form>
+            <div class="clear"></div>
+        </section>
+        <div class="clear"></div>
+    </div>
+    
+    <section id="space">
+        <p></p>
+    </section>
+    
+    <section id="footer">
+        <p id="copyright">&#169; Tom Neckermann</p>
+        <p id="usage">FrogChat is free to use personally, professionally and commercially without any restrictions.</p>
+    </section>
+</body>
+</html>
